@@ -1,33 +1,34 @@
 package br.com.db1.start.recibo;
 
 import java.util.Date;
+import java.util.List;
 
 import br.com.db1.start.emitente.Emitente;
 
-public class Recibo<List> {
-	
+public class Recibo {
+
 	private Integer numero;
-	
+
 	private Double valor;
-	
+
 	private Date dataCadastro;
-	
+
 	private Boolean confirmacao;
-	
+
 	private Date dataEmissao;
-	
+
 	private Pagador pagador;
-	
+
 	private Cidade cidade;
-	
+
 	private Emitente emitente;
-	
-	private Servico servico;
-	
+
+	private List<Servico> servico;
+
 	public Recibo() {
-	
+
 	}
-	
+
 	public Double getValor() {
 		return valor;
 	}
@@ -100,13 +101,13 @@ public class Recibo<List> {
 		this.numero = numero;
 	}
 
-	public String getValorDescritivo(){
-		
+	public String getValorDescritivo() {
+
 		return " ";
 	}
-	
-	public String getDataEmissaoDescritiva(){
-		
+
+	public String getDataEmissaoDescritiva() {
+
 		return " ";
 	}
 }

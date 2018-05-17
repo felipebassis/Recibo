@@ -1,25 +1,25 @@
 package br.com.db1.start.recibo;
 
 public class Endereco {
-	
+
 	private TipoLogradouro tipoLogradouro;
-	
+
 	private String logradouro;
-	
+
 	private String numero;
-	
+
 	private Integer cep;
-	
+
 	private String complemento;
-	
+
 	private String bairro;
-	
+
 	private Uf uf;
-	
-	public Endereco(){
-		
+
+	public Endereco() {
+
 	}
-	
+
 	public TipoLogradouro getTipoLogradouro() {
 		return tipoLogradouro;
 	}
@@ -47,11 +47,11 @@ public class Endereco {
 	public Integer getCep() {
 		return cep;
 	}
-	
-	public void setCep(Integer cep){
+
+	public void setCep(Integer cep) {
 		this.cep = cep;
 	}
-	
+
 	public String getComplemento() {
 		return complemento;
 	}
@@ -76,21 +76,15 @@ public class Endereco {
 		this.uf = uf;
 	}
 
-	public String getEnderecoFormatado(){
-	
-	
-		return " ";	
+	public String getEnderecoFormatado() {
+
+		return " ";
 	}
-	
-	
-	public String getCepFormatado(){
+
+	public String getCepFormatado() {
 		String cepFormatado = this.cep.toString();
-		
-		cepFormatado = cepFormatado.substring(0, 5) + "-" + cepFormatado.substring(5);
-		
-		return cepFormatado;
+
+		return cepFormatado = cepFormatado.substring(0, 5) + "-" + cepFormatado.substring(5);
 	}
-	
-	
-	
+
 }
