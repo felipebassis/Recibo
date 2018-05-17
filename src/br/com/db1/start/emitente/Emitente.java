@@ -6,7 +6,7 @@ public class Emitente {
 	
 	private byte[] assinatura;
 	
-	private Integer documento;
+	private String documento;
 	
 	private TipoDocumento tipoDocumento;
 	
@@ -26,11 +26,11 @@ public class Emitente {
 		this.assinatura = assinatura;
 	}
 
-	public Integer getDocumento() {
+	public String getDocumento() {
 		return documento;
 	}
 
-	public void setDocumento(Integer documento) {
+	public void setDocumento(String documento) {
 		this.documento = documento;
 	}
 
@@ -42,8 +42,12 @@ public class Emitente {
 		this.tipoDocumento = tipoDocumento;
 	}
 
-	public String getDocumentoFormatado(){
-		
-		return " ";
+	public String getDocumentoFormatado(String documento){
+		if(documento.length() == 11){
+			return documento.substring(0,3) + "." + documento.substring(3,6) + "." + documento.substring(6,9) + "-" +documento.substring(9,11);
+		}
+		else{
+			return documento;
+		}
 	}
 }
